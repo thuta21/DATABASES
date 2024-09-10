@@ -25,11 +25,11 @@ Content
              Normalization မှာ အခြေခံအကျဆုံး form ဖြစ်ပြီး Data field တစ်ခုစီမှာ single value တွေသာ ရှိရမယ်။ ရိုးရိုး tabular format ဖြစ်ရမယ်။ Repeating groups (data redundancy) မရှိရ။ Column တစ်ခုအတွင်းမှာ Mixing Data Type မဖြစ်ရ။ ပိုပြီး နားလည်အောင် ဥပမာလေးတွေနဲ့ သွားကြည့်ပါမယ်။ 
              
              Example (1)
-             ![01_1NF](images/01_1NF.png)
-	         ![02_1NF](images/02_1NF.png)
-              ![03_1NF](images/03_1NF.png)
-             ![04_1NF](images/04_1NF.png)
-          2. ****Second Normal Form (2NF)****
+              ![03_1NF](images/test.png)
+        
+          
+		  
+		  2. ****Second Normal Form (2NF)****
           3. ****Third Normal Form (3NF)****
           4. ****Fourth Normal Form (4NF)****
           5. ****Fifth Normal Form (5NF)****
