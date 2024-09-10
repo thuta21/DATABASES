@@ -11,7 +11,7 @@ Content
    
    1. What is Normalization? Why ? How ?
       
-      ****Normalization**** is the process of minimizing ****redundancy**** from a relation or set of relations
+      >> ****Normalization**** is the process of minimizing ****redundancy**** from a relation or set of relations
 
       
    
