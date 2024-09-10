@@ -17,7 +17,7 @@ Content
       
        Normalization ဆိုတာက Data Redundancy လျော့ချဖို့ အတွက် Data တွေကို သီးသန့် Collections / Table တွေခွဲပြီး Primary Key တွေ Foreign Key တွေ သုံးပြီး သိမ်းလိုက်တာ ဖြစ်ပါတယ်။ ဒါဆို Normal Form (NF) တွေကို ဆက်လေ့လာရအောင်။ 
        
-       1. Normal Form 
+	1. Normal Form 
           
           **Normal Forms** (NF) ဆိုတာ Relational Database Design မှာ data ကို proper structure ထားဖို့အသုံးပြုတဲ့ **guidelines** မျိုးဖြစ်ပါတယ်။ အဓိကရည်ရွယ်ချက်က data redundancy နဲ့ anomalies (အမှားအယွင်း) ကိုလျှော့ချပြီး, တိကျမှန်ကန်ဖို့ ပါ။ Normal form ကို အဆင့်အလိုက်ခွဲကြည့်လို့ရပါတယ်။
           
