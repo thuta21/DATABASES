@@ -3,7 +3,7 @@ Content
 
 1. What is Database?
 2. What is Query?
-3. 
+3. What is Schema?
 
 ------------------------------------------------------------------------
 
@@ -41,13 +41,14 @@ Content
    ဒါဆို Schema ကကော ဘာလဲ။ Schema ဆိုတာက Database ထဲမှာသိမ်းထားတဲ့ Data တွေရဲ့ Design တစ်ခု / Structure တစ််ခုလို့ မြင်ကြည့်လို့ရပါတယ်။ ဆိုလိုတာက အပေါ်မှာ ပြောခဲ့သလိုပဲ Database ကို Excel လို့သတ်မှတ်ရင် Schema ဆိုတာက Columns တွေလို့ မှတ်လို့ရပါတယ်။ ဥပမာ Json format တစ်ခုရှိတယ် ထားပါတော့။    
    
    ```
-      {
+    {
 		"name": "Thuta Min Thway",
 		"age": "23",
 		"gender": "MALE",
 		"isSingle": false // 😜
-	   }
+	}
     ```
    
    ဒီ format မှာ " name, age, gender, isSingle " ဆိုတာတွေက Schema တွေပါ။ တစ်ခုရှိတာက တစ်ချို့ DBMS types တွေမှာ Schema မတူတာမျိုး ရှိတတ်ပါတယ်။
- 
+   
+------------------------------------------------------------------------
