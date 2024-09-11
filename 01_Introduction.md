@@ -21,7 +21,7 @@ Content
    
    ဒီလို Data manipulation လုပ်ဖို့ဆို DBMS ကို သုံးရတော့မယ်။​ DBMS ရဲ့ အရှည်ကောက်က Database Management System ဖြစ်ပြီး Data တွေကို စီမံဖို့ Tools ( Software ) တစ်ခုပါ။ 
    
-   DBMS types တွေအနေနဲ့ အများကြီး ရှိပြီး အများကြီးကျယ်ပြန့်တယ်။ Message Brokers တို့ Multi model databases တို့လိုပေါ့။​ ကျွန်တော်ကတော့ လေ့လည်း လေ့လာရင်းဆိုတော့ လူသုံးများတဲ့ သိထားသင့်တဲ့ 
+   DBMS types တွေအနေနဲ့ အများကြီး ရှိပြီး အများကြီးကျယ်ပြန့်တယ်။ Message Brokers တို့ Multi model databases တို့လိုပေါ့။​ ကျွန်တော်ကတော့ လေ့လည်း လေ့လာရင်းဆိုတော့ လူသုံးများပြီး သိထားသင့်တဲ့ 
    
    (1) Relational Databases ( RDMS )
    (2) NoSQL တို့တွေကို တစ်ဆင့်ပြီး တစ်ဆင့် အနေနဲ့ အတူလေ့လာကြည့်ပါမယ်။ 
