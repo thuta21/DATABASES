@@ -37,7 +37,7 @@ Content
           ဥပမာပုံကို ကြည့်ရင် ရှင်းသွားပါလိမ့်မယ်။
 
 		---------------------------------------------------------------
-    1. Second Normal Form ( 2NF )
+    2. Second Normal Form ( 2NF )
           
          >All Data must depend on the Primary Key.
           
@@ -68,7 +68,8 @@ Content
 		---------------------------------------------------------------
     5. Fourth Normal Form ( 4NF )
 	    
-        Rules: 
+         Rules: 
+         
 	      - it must be in BCNF.
 	      - A table should not have Multi-Valued Dependencies.
 		   
@@ -81,7 +82,7 @@ Content
 		 ဒီလို Column တစ်ခုထဲမှာ Independent ရော Dependent ရောဖြစ်နေရင် Multi-valued dependencies လို့ မှတ်ထားလို့ရပါတယ်။ ဥပမာ ပုံကြည့်ရအောင်။ 
 		   
 		---------------------------------------------------------------
-	   6. Fifth Normal Form ( 5NF )
+    6. Fifth Normal Form ( 5NF )
 	      
 	      Rules : 
 	      
@@ -92,4 +93,4 @@ Content
 	      
 		---------------------------------------------------------------	    
    
-   
+------------------------------------------------------------------------
