@@ -1,7 +1,13 @@
 
 Content
 1. What is Normalization?
-
+2. Normal Form
+	1. First Normal Form ( 1NF )
+	2. Second Normal Form ( 2NF )
+	3. Third Normal Form ( 3NF )
+	4. BCNF ( Boyce-Codd Normal Form / 3.5 Normal Form )
+	5. Fourth Normal Form ( 4NF )
+	6. Fifth Normal Form ( 5NF )
 
 ------------------------------------------------------------------------
 
@@ -35,6 +41,8 @@ Content
           - Row တစ်ခုရဲ့ Information (value) တွေ မှာ သက်ဆိုင်ရာ Unique Key ( Primary Key )ရှိရမယ်။ 
             
           ဥပမာပုံကို ကြည့်ရင် ရှင်းသွားပါလိမ့်မယ်။
+          
+          ![GPA](images/1NF.png)
 
 		---------------------------------------------------------------
     2. Second Normal Form ( 2NF )
@@ -44,6 +52,8 @@ Content
           2NF Rule ကကျတော့ 
           - ကိုယ့် Table မှာ Non-Key-columns ( Key လို့ သတ်မှတ်လို့မရတဲ့ ) ရှိလား အရင်ရှာမယ်။
           - အဲ့ဒီ Non-Key-columns နဲ့ Key Columns ( PK or FK ) တွေနဲ့ သင့်တော်လား။ သင့်တော်ရင် Table / Collections တစ်ခုခွဲပြီး သပ်သပ်စီ ထားပေးမယ်။ ဥပမာ ပုံကြည့်ရအောင်
+            
+         ![2NF](images/2NF.png)
 
 		---------------------------------------------------------------
     3. Third Normal Form ( 3NF )
@@ -54,6 +64,8 @@ Content
 		   
 		 ဆိုကြပါဆို့ ကျွန်တော်တို့ Letter Gradeပေါ်မူတည်ပြီး GPA Scale score တွက်ကြည့်ကြပါမယ်။​ 2NF က table ကိုပဲ ဆက်သုံးပါမယ်။
 
+		 ![3NF](images/3NF.png)
+		
 		---------------------------------------------------------------
     4. BCNF ( Boyce-Codd Normal Form / 3.5 Normal Form )
        
@@ -64,6 +76,12 @@ Content
 		 BCNF မှာ Functional Dependency များဟာ Candidate Key ကိုသာ အခြေပြုထားရမယ်။ ဥပမာအားဖြင့် Table ရဲ့ Field တစ်ခုက တခြား Field တစ်ခုကို သတ်မှတ်နေတဲ့အခါ၊ အဲဒီ Field (သို့) Field Group က Table ရဲ့ Candidate Key ဖြစ်ရမယ်။
 		   
 		 ဒါဆို Candidate Key တို့ Functional Dependency ကို တစ်ချက်အရင်ရှင်းပြပါမယ်။​
+		 
+		 ![CandF](images/CandF.png)
+
+		 ဒါဆို BCNF ကို တစ်ချက်ဆက်လေ့လာရအောင်
+		 
+		 ![BCNF](images/BCNF.png)
 
 		---------------------------------------------------------------
     5. Fourth Normal Form ( 4NF )
@@ -81,6 +99,8 @@ Content
 		   
 		 ဒီလို Column တစ်ခုထဲမှာ Independent ရော Dependent ရောဖြစ်နေရင် Multi-valued dependencies လို့ မှတ်ထားလို့ရပါတယ်။ ဥပမာ ပုံကြည့်ရအောင်။ 
 		   
+		 ![4NF](images/4NF.png)
+		
 		---------------------------------------------------------------
     6. Fifth Normal Form ( 5NF )
 	      
@@ -90,7 +110,7 @@ Content
 	      - The relation must not be further non loss decomposed.
 	        
 	     4NF မှာက Multi-Valued Dependencies ကို Handled နိုင်တယ်ဆိုရင် 5NF မှာက Join Dependencies ကို Handled လုပ်ပေးပါတယ်။ Food Ordering Process ကို နာမူနာထားပြီး ကြည့်ရအောင်။
+	     
+	     ![5FN](images/5NF.png)
 	      
-		---------------------------------------------------------------	    
-   
 ------------------------------------------------------------------------
