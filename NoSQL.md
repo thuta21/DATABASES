@@ -1,6 +1,10 @@
 
 Content 
 1. What is NoSQL?
+	1. Document-oriented stores
+	2. Key-value stores
+	3. Graph stores
+	4. Column-family stores
 
 ------------------------------------------------------------------------
 
@@ -16,29 +20,45 @@ Content
    
    NoSQL Database ကို အဓိကအားဖြင့် အမျိုးအစား (၄) မျိုးခွဲထားတယ်။ 
    
-  i. Document-oriented stores
+   1. Document-oriented stores
       
       Document Stores ဆိုတဲ့ အတိုင်းပဲ Data ကို Document ထဲမှာ သိမ်းတာပေါ့။ ဘယ်လိုသိမ်းလဲဆိုရင် Collection နဲ့ သိမ်းတယ်။ Document တစ်ခုစီမှာ Nested Structure နဲ့ သိမ်းပါတယ်။ Schema မသတ်မှတ်ထားတဲ့အတွက် Data အစုံပါတယ်။ key-value pairs လည်းဖြစ်နိုင်တယ်။ key-array လည်းဖြစ်နိုင်တယ်။
       
       Example: MongoDB
             
-```
-{
-   "_id": "12345",
-   "name": "John Doe",
-   "email": "john@example.com",
-   "address": {
-      "street": "123 Main St",
-      "city": "New York"
-   }
-}
-```
+	```
+	{
+	   "_id": "12345",
+	   "name": "John Doe",
+	   "email": "john@example.com",
+	   "address": {
+	      "street": "123 Main St",
+	      "city": "New York"
+	   }
+	}
+	```
+  
+   2. Key-value stores
       
-  ii. Key-value stores
+      သူကတော့ ရိုးရှင်းတယ်။ database ထဲ Key-Value Pair ပုံစံအဖြစ် Data တွေကို သိမ်:ပြီး Key က Unique ဖြစ်ရမယ်။ Value ကတော့ အမျိုးမျိုးသော Data Type (String, Integer, List) အဖြစ်ရှိနိုင်ပါတယ်။
       
+      Example : Redis
       
- iii. Graph stores
- iv. Column-family Stores
+	```
+	user:1001 => "John Doe"
+	```
+
+   3. Graph stores
+      
+      Graph-based Databases တွေက Data တွေကြားရှိ Relationship တွေကို Nodes နဲ့ Edges အနေနဲ့ သိမ်းဆည်းတယ်။ Nodes ဟာ Entities ကို ကိုယ်စားပြုပြီး Edges တွေက Relationship တွေကို ကိုယ်စားပြုပါတယ်။
+      
+      Highly Connected Data တွေကို Represent လုပ်ဖို့အတွက် အထူးသင့်တော်ပြီး Complex Relationships ကို လွယ်လွယ်ကူကူ Query လုပ်နိုင်ပါတယ်။
+      
+   4. Column-family stores
+      
+      Columns Store ဆိုတဲ့ အတိုင်းပဲ Column-based Database ဖြစ်ပြီး, Row တွေကို Data Group အဖြစ် Column Families အနေနဲ့ သိမ်းတတ်ပါတယ်။ Column တစ်ခုနဲ့ တစ်ခု က Independent ဖြစ်နေမယ်။ CRM တို့ Data Warehousing , Business Intelligent စတဲ့ Management apps တွေအတွက် အသုံးပြုပါတယ်။
+      
+      Example : Cassandra, HBase, and Hypertable.
 
    
    
