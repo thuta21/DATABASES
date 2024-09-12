@@ -10,7 +10,7 @@ Content
    
 	1. Launch MongoDB Shell
 	   
-      ဒီCommand ရိုက်လိုက်ရင် MongoDB နဲ့ interact လုပ်လို့ရတဲ့ Environment ပွင့်လာပါလိမ့်မယ်။
+	      ဒီCommand ရိုက်လိုက်ရင် MongoDB နဲ့ interact လုပ်လို့ရတဲ့ Environment ပွင့်လာပါလိမ့်မယ်။
 	```
 	  mongosh
 	``` 
