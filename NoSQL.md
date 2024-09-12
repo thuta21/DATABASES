@@ -16,9 +16,11 @@ Content
    
    NoSQL Database ကို အဓိကအားဖြင့် အမျိုးအစား (၄) မျိုးခွဲထားတယ်။ 
    
-   1. Document-oriented stores
+1. Document-oriented stores
       
-      Document Stores ဆိုတဲ့ အတိုင်းပဲ Data ကို Document ထဲမှာ သိမ်းတာပေါ့။ ဘယ်လိုသိမ်းလဲဆိုရင် Collection နဲ့ သိမ်းတာပါ။ Document တစ်ခုစီမှာ Nested Structure နဲ့ သိမ်းပါတယ်။ Schema မသတ်မှတ်ထားတဲ့အတွက် Data အစုံပါတယ်။ key-value pairs လည်းဖြစ်နိုင်တယ်။ key-array လည်းဖြစ်နိုင်တယ်။
+      Document Stores ဆိုတဲ့ အတိုင်းပဲ Data ကို Document ထဲမှာ သိမ်းတာပေါ့။ ဘယ်လိုသိမ်းလဲဆိုရင် Collection နဲ့ သိမ်းတယ်။ Document တစ်ခုစီမှာ Nested Structure နဲ့ သိမ်းပါတယ်။ Schema မသတ်မှတ်ထားတဲ့အတွက် Data အစုံပါတယ်။ key-value pairs လည်းဖြစ်နိုင်တယ်။ key-array လည်းဖြစ်နိုင်တယ်။
+      
+      Example: MongoDB
             
 ```
 {
@@ -31,11 +33,12 @@ Content
    }
 }
 ```
-`
       
-   2. Key-value stores
-   3. Graph stores
-   4. Column-family Stores
+2. Key-value stores
+      
+      
+3. Graph stores
+4. Column-family Stores
 
    
    
