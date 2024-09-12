@@ -8,5 +8,5 @@ Content
    
    1. Launch MongoDB Shell
       
-    `mongosh`
-  
+    ```
+  mongosh
