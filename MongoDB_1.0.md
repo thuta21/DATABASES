@@ -4,7 +4,6 @@ Content
 2. What is MongoDB?
 3. Installation
 
-
 ------------------------------------------------------------------------
 
 1. Introduction 
@@ -44,20 +43,5 @@ MongoDB က NoSQL Database တစ်မျိုးဖြစ်ပြီး Docu
 
 ------------------------------------------------------------------------
 
-3. Installation 
-   
-	1. Guide Video ( https://www.youtube.com/watch?v=QEBuMROQuNw )
-	   - Install Shell
-	   - Install Compass
-	     
-	2. Using With Docker
-	   - Install Docker Desktop ( https://www.docker.com/products/docker-desktop/ )
-	   - Run this command 
-	     
-	     ```bash
-docker run --name test-mongo -dit -p 27017:27017 --rm mongo:4.4.1
 
-docker exec -it test-mongo mongo
-```
-	
 ------------------------------------------------------------------------
