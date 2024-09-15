@@ -7,20 +7,19 @@ Content
 
 1. Installation, Download Sources and Docker
    
-1. Community Installation ( https://www.mongodb.com/docs/manual/administration/install-community/ )
+- Community Installation ( https://www.mongodb.com/docs/manual/administration/install-community/ )
     
-   - Compass Tool
-    https://www.mongodb.com/docs/compass/current/install/
+- Compass Tool ( https://www.mongodb.com/docs/compass/current/install/ )
 
-   - Getting start with MongoServer ( Mongo Server = MongoShell + MongoCompass )
-     
-    Installation Guide Videos
+- Getting start with MongoServer ( Mongo Server = MongoShell + MongoCompass )
+	
+	Installation Guide Videos
     
     https://www.youtube.com/watch?v=8gUQL2zlpvI&t=592s ( MacOS )
     https://www.youtube.com/watch?v=OiMOQr457Qs ( Window )
     https://www.youtube.com/watch?v=HSIh8UswVVY ( Ubuntu )
 
-   - Getting start with Docker
+- Getting start with Docker
      
     1. Install Docker Desktop ( https://www.docker.com/products/docker-desktop/ )
     2. Run this command
@@ -31,7 +30,7 @@ docker run --name test-mongo -dit -p 27017:27017 --rm mongo:4.4.1
 docker exec -it test-mongo mongo
 ```
 
-   - Connection
+- Connection
      
      1. Connect with VS Code ( https://www.youtube.com/watch?v=Dg1v3-Rkxv0 )
 	 2. Connect with Terminal ( https://www.youtube.com/watch?v=0-mc8obNrw4 )  
