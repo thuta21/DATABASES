@@ -7,8 +7,7 @@ Content
 
 1. Installation, Download Sources and Docker
    
-   - Community Installation
-    https://www.mongodb.com/docs/manual/administration/install-community/
+1. Community Installation ( https://www.mongodb.com/docs/manual/administration/install-community/ )
     
    - Compass Tool
     https://www.mongodb.com/docs/compass/current/install/
