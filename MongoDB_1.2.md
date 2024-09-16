@@ -290,3 +290,131 @@ db.users.find({},{_id: false, name: true})
 > true အစား 1 လည်း သုံးလို့ရတယ်။ 
 
 ------------------------------------------------------------------------
+
+11. `updateOne` / `updateMany` / `delete`
+
+အပေါ်က Insert လိုမျိုးပဲ သိပ်မကွာပါဘူး။ 
+
+- `$set` ( ပြင် / ထည့်)
+
+```
+db.users.updateOne({_id: ObjectId("66e7b28c83faebe98283f728")}, {$set: {name: "tony Tun Tun"}})
+```
+
+>Update `$set` သုံးပြီး Update လိုက်မယ်။ `$set` တဲ့နေရာမှာ Documents ထဲမှာ မရှိတဲ့ key တစ်ခုခုကို ထည့်လိုက်ရင်တော့ အဲ့ Documents မှာ Key တစ်ခုအနေနဲ့ အသစ်ဝင်လာလိမ့်မယ်။
+
+- `$unset` ( ဖျက် )
+
+```
+db.users.updateOne({_id: ObjectId("66e7b28c83faebe98283f728")}, {$unset: {name: ""}})
+```
+
+- `updateMany`
+
+Example Use Case
+
+```
+collections.updateMany(<filter>, <update>)
+```
+
+- `deleteOne`
+
+```
+db.collection.deleteOne(
+    <filter>,
+    <update>
+)
+```
+
+- `deleteMany`
+
+```
+db.collection.deleteMany(
+    <filter>,
+    <update>
+)
+```
+
+------------------------------------------------------------------------
+
+12. indexes
+
+MongoDB မှာ Indexes တွေက Database ထဲက data တွေကို လွယ်ကူမြန်ဆန်စွာ ရှာဖွေဖို့ အရေးကြီးပါတယ်။ Indexes မထားတဲ့ Database ထဲမှာ ရှာဖွေမယ်ဆိုရင် Document တစ်ခုခြင်းစီကို scan (ခေါ်တာက table scan) လုပ်ရမယ်၊ အဲဒါကတော့ performance အရ ကျဆင်းစေပါတယ်။
+
+ဒီထပ်နားလည်အောင်ထပ်ရှင်းရအောင်
+
+![[01_indexes.png]]
+
+ကျွန်တော်တို့မှာ `user` Collections ရှိတယ်။ အဲ့အထဲမှာလည်း Documents တွေ Create လိုက်ကြတယ်မလာ။ 
+
+ဆိုပါတော့ အဲ့ဒီ Documents တွေထဲကမှ `isStudent = false` ဖြစ်နေတဲ့ သူတွေကိုရှာကြမယ်။ ဒါဆို `isStudent = false` ဖြစ်တဲ့ Documents တစ်ခုချင်းစီကို လိုက်ရှာရတော့မယ်။ 
+
+Data နည်းရင် ကိစ္စမရှိပေမယ့် သောင်းဂဏန်း ၊ သိန်းဂဏန်းဆိုရင် Load ပိုကြာလာမယ်။ ဒါကြောင့် Indexing ကို သုံးကြမယ်။
+
+သူ့လုပ်ဆောင်ပုံကို တစ်ချက် ကြည့်ရအောင်။ 
+
+![[01.1_indexes.png]]
+
+ကျွန်တော်တို့က `is_student` နေရာကို indexes ဆောက်ပေးလိုက်တယ်။ ( True သို့ False ပေါ့ ) 
+
+အဲ့တာဆို နောက်တစ်ကြိမ် is_student ခေါ်တဲ့နေရာမှာ Document တိုင်းကို Loop ပတ်ပြီးသွားမရှာတော့ဘူး။ အဲ့ `is_student` index ပေးထားတဲ့ နေရာပဲ ထွက်လာလိမ့်မယ်။ ဘယ်လိုစမ်းကြည့်လို့ရမလဲဆက်ပြောရအောင်။
+
+
+```
+db.users.find({isStudent: false }).explain('executionStats');
+```
+
+![[01.2_indexes.png]]
+
+ပုံထဲက executionStats တစ်ချက်ကြည့်ရအောင်။ 
+
+ကျွန်တော်မှာက Record 22 ခုပဲ ရှိတယ်။ `TotalDocsExamined` မှာ ကြည့်လို့ရတယ်။  `nReturned: 9` ဆိုပြီး ပြန်လာတယ်။ ဒါက အပေါ်မှာ run ခဲ့တဲ့ `isStudent: true` ဖြစ်တဲ့ count။ 
+
+တွေ့တဲ့ အတိုင်းပဲ ကျွန်တော်တို့ကို ပြန်ပေးမယ့် Return value 9 ခု အတွက် သူက Linear Search နဲ့ Record 22 ခုလုံးမှာ ရှာလိုက်ရတယ်။ ဒါဆို indexes ကို စသုံးမယ်။ 
+
+
+```
+db.users.getIndexes()
+
+// [ { v: 2, key: { _id: 1 }, name: '_id_' } ]
+```
+
+MongoDB မှာက Default indexes တစ်ခုပါတယ်။ အပေါ်က `getIndexes()` ဆိုပြီး ရိုက်ကြည့်လို့ရတယ်။ ဒါဆို အသစ်တစ်ခု create ကြမယ်။
+
+```
+db.users.createIndex({ isStudent: 1 })
+```
+
+ဒါဆို `getIndexes()` ပြန်ရိုက်လိုက်ရင် အသစ်တိုးနေတာ တွေ့ရမှာပါ။
+
+```
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { isStudent: 1 }, name: 'isStudent_1' }
+]
+```
+
+ ဒါဆိုရင် ကျွန်တော်တို့ indexes တည်ဆောက်တာ အဆင်ပြေသွားပြီ။ `executionStats` လေး ပြန် Run ကြည့်ရအောင်
+
+```
+db.users.find({isStudent: false }).explain('executionStats');
+```
+
+![[01.3_indexes.png]]
+
+မြင်တဲ့ အတိုင်းပဲ `docsExamined` မှာ 9 ခုပဲ သွားဆွဲတော့တာ တွေ့ရမှာပါ။ 
+
+Note: တစ်ခုနားလည်ရမှာက Indexing လုပ်တာတွေသည် Read မှာတော့ အတော်အဆင်ပြေတာ မှန်ပေမယ့် Write လုပ်တဲ့ အချိန်တွေမှာဆိုရင် ပိုပြီး ဆိုးသွားနိုင်ပါတယ်။
+
+ဆိုလိုတာက Index ထောက်ထားတဲ့ Data ကို ပြန် write တဲ့အခါမှာ indexing ပါ ပြန်ပြီး အသစ်လုပ်ရပါတယ်။
+
+Indexes တွေသုံးပုံသုံးနည်းတွေရှိသေးတယ်။ ဥပမာ 
+1) Single Field Index**: တစ်ခုတည်းသော field ပေါ်မှာ Index ထားတာပါ။ ဥပမာ `name` field ပေါ်မှာ Index ထားမယ်ဆိုရင် `name` ဖြင့် ရှာတဲ့ Queries တွေမြန်မှာပါ။
+   
+2) **Compound Index**: Field နှစ်ခု သို့မဟုတ် အများကြီးပေါ်မှာ Index ထားလို့ရတယ်။ ဒါက field အများကြီးကို အသုံးပြုတဲ့ Queries တွေကို မြန်ဆန်စေပါတယ်။
+   
+3) **Multikey Index**: Array type fields တွေအတွက် index ထားတဲ့ concept ဖြစ်ပါတယ်။ Array ထဲက အချက်အလက်တွေကို စီပြီး Index ချထားတဲ့ Queries တွေ အတွက် မြန်ဆန်စေပါတယ်။
+   
+4) **Text Index**: Text Field တွေမှာ စာသားတွေကို ရှာဖို့ Index တင်ရင် Text Index ကိုသုံးတတ်ကြပါတယ်။ အဓိကအားဖြင့် string type data တွေကို ရှာဖွေတဲ့ Queries များမှာ အသုံးဝင်ပါတယ်။
+
+------------------------------------------------------------------------
