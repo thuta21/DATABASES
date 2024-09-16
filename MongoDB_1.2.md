@@ -409,7 +409,7 @@ Note: တစ်ခုနားလည်ရမှာက Indexing လုပ်တ�
 ဆိုလိုတာက Index ထောက်ထားတဲ့ Data ကို ပြန် write တဲ့အခါမှာ indexing ပါ ပြန်ပြီး အသစ်လုပ်ရပါတယ်။
 
 Indexes တွေသုံးပုံသုံးနည်းတွေရှိသေးတယ်။ ဥပမာ 
-1) Single Field Index**: တစ်ခုတည်းသော field ပေါ်မှာ Index ထားတာပါ။ ဥပမာ `name` field ပေါ်မှာ Index ထားမယ်ဆိုရင် `name` ဖြင့် ရှာတဲ့ Queries တွေမြန်မှာပါ။
+1) **Single Field Index**: တစ်ခုတည်းသော field ပေါ်မှာ Index ထားတာပါ။ ဥပမာ `name` field ပေါ်မှာ Index ထားမယ်ဆိုရင် `name` ဖြင့် ရှာတဲ့ Queries တွေမြန်မှာပါ။
    
 2) **Compound Index**: Field နှစ်ခု သို့မဟုတ် အများကြီးပေါ်မှာ Index ထားလို့ရတယ်။ ဒါက field အများကြီးကို အသုံးပြုတဲ့ Queries တွေကို မြန်ဆန်စေပါတယ်။
    
