@@ -258,3 +258,35 @@ db.users.insertOne({
 
 ------------------------------------------------------------------------
 
+10. Projection
+
+Record ကို Filter တဲ့ အထိ အဆင်ပြေပြီ။ နောက်တစ်ဆင့် Projection ဆိုတာ ဆက်လေ့လာရအောင်။ 
+
+```
+db.users.find({query}{projection})
+```
+
+Projection က query ပြီးရင် Second parameter ဖြစ်တယ်။ သူက Documents ထဲမှာ ရှိတဲ့ Specific keys တွေကို filter လို့ရတယ်။ 
+
+ဥပမာ ကျွန်တော်တို့မှာ 
+1) name
+2) age
+3) height
+4) isStudent ဆိုပြီးရှိတယ်။ ဒီထဲမှာမှ Name ပဲ ယူချင်တယ်ဆိုရင်
+
+```
+db.users.find({},{name: true})
+```
+
+![projection](images/projection.png)
+
+ဒါပေမယ့် id ပါ တွဲပါနေတယ်။ မပါစေချင်ဘူးဆိုရင် 
+
+```
+db.users.find({},{_id: false, name: true})
+```
+
+> false အစား 0 လည်း သုံးလို့ရတယ်။
+> true အစား 1 လည်း သုံးလို့ရတယ်။ 
+
+------------------------------------------------------------------------
