@@ -357,13 +357,13 @@ Documentation: [Logical Query Operators](https://www.mongodb.com/docs/manual/ref
 
   
 
-- `$and`: Joins query clauses with a logical AND.
+- `$and`: Joins query clauses with a logical `AND` returns all documents that match the conditions of both clauses..
 
-- `$not`: Inverts the effect of a query predicate.
+- `$not`: Inverts the effect of a query predicate and returns documents that do _not_ match the query predicate.
 
-- `$nor`: Joins query clauses with a logical NOR.
+- `$nor`: Joins query clauses with a logical `NOR` returns all documents that fail to match both clauses.
 
-- `$or`: Joins query clauses with a logical OR.
+- `$or`: Joins query clauses with a logical `OR` returns all documents that match the conditions of either clause.
 
   
 
