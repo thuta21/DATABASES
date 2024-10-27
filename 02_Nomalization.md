@@ -1,5 +1,5 @@
 
-# Database Normalization
+# Database Normalization ဆိုတာ...
 
 ---
 
@@ -64,6 +64,9 @@ Normalization နှင့် Denormalization ဆိုတဲ့စကားလ�
 
 > The Primary Key must fully depend on all Non-Key columns, and Non-Key columns must not depend on any other Key.
 
+
+![GPA](images/GPA.jpeg)
+
 ဥပမာ - Letter Grade နဲ့ GPA Scale ကို အသုံးပြုထားတဲ့ ပုံကြည့်ပါ။
 
 ![3NF](images/3NF.png)
@@ -75,6 +78,8 @@ Normalization နှင့် Denormalization ဆိုတဲ့စကားလ�
 Rules:
 - The table should be in 3rd Normal Form.
 - Functional dependencies X−>Y တွေအားလုံးအတွက် X က Superkey ဖြစ်ရမယ်။
+
+BCNF မှာ Functional Dependency များဟာ Candidate Key ကိုသာ အခြေပြုထားရမယ်။ ဥပမာအားဖြင့် Table ရဲ့ Field တစ်ခုက တခြား Field တစ်ခုကို သတ်မှတ်နေတဲ့အခါ၊ အဲဒီ Field (သို့) Field Group က Table ရဲ့ Candidate Key ဖြစ်ရမယ်။
 
 Candidate Key နဲ့ Functional Dependency ကို ရှင်းပြပါမယ်။
 
@@ -88,7 +93,12 @@ Rules:
 - Table သည် BCNF ဖြစ်ရမယ်။
 - Table တွင် Multi-Valued Dependencies မရှိရဘူး။
 
-Multi-Valued Dependencies ကို တစ်ချက်ရှင်းပြပါမယ်။ 
+Multi-Valued Dependencies ဆိုတာကို ပြောရရင် ဆိုကြပါစို့ ကျွန်တော်တို့မှာ Column A, B, C ဆိုပြီး သုံးခုရှိတယ်။ Column A က Primary Key လို့ယူဆရအောင်။
+
+A ->-> ထဲမှာ တစ်ခုထပ်ပိုပြီး Dependent B value တွေရှိနိုင်တယ်။ ထိုနည်းလည်းကောင်းပဲ A ->-> ထဲမှာ C values တွေရှိနိုင်တယ်။ ဒါပေမယ့် Column B နဲ့ Column C ကတော့ Independent ဖြစ်နေမယ်။
+
+ဒီလို Column တစ်ခုထဲမှာ Independent ရော Dependent ရောဖြစ်နေရင် Multi-valued dependencies လို့ မှတ်ထားလို့ရပါတယ်။ ဥပမာ ပုံကြည့်ရအောင်။
+
 
 ![4NF](images/4NF.png)
 
@@ -100,7 +110,7 @@ Rules:
 - Relation မှာ Fourth Normal Form ဖြစ်ရမယ်။
 - The relation must not be further non-loss decomposed.
 
-5NF မှာ Join Dependencies ကို handled လုပ်ပါတယ်။ ဥပမာ - Food Ordering Process ကိုကြည့်ပါ။
+4NF မှာက Multi-Valued Dependencies ကို Handled နိုင်တယ်ဆိုရင် 5NF မှာက Join Dependencies ကို Handled လုပ်ပေးပါတယ်။ Food Ordering Process ကို နာမူနာထားပြီး ကြည့်ရအောင်။
 
 ![5FN](images/5NF.png)
 
