@@ -1,27 +1,26 @@
+## Content
 
-Content
 1. What is Denormalization?
 2. Conclusion
-   
-------------------------------------------------------------------------
 
-1. What is Denormalization?
-   
-   Denormalization ဆိုတာက Normalization ရဲ့ ပြောင်းပြန်ပေါ့။ Normalization က Redundant Column တွေကို ခွဲထုတ်တယ်။ Denormalization ကတော့ ပြန်ပေါင်းထည့်တယ်။ 
-   
-   သူ့ကို Database Optimization Technique လို့လည်း ခေါ်ကြတယ်။ Data တွေကို Normalization လုပ်တာက အဆင်ပြေပေမယ့် ပြသာနာက Data တစ်ခုကို လိုချင်လို့ Table ပေါင်းစုံကနေ data ပတ်ယူရတာမျိုးဖြစ်တတ်တယ်။ 
-   
-   Denormalization မှာကျတော့ table တစ်ခုထဲမှာပဲ လိုချင်တဲ့ Data တွေ အကုန်ယူလို့ရနိုင်တယ်။ ဒါကြောင့် Query ဆွဲတဲ့ နေရာမှာလည်း ပိုပြီးမြန်ဆန်တယ်။
-   
-   ဥပမာလေး တစ်ချက်ကြည့်ရအောင်။
-   
+---
+
+### 1. What is Denormalization?
+
+   Denormalization ဆိုတာက Normalization ရဲ့ ပြောင်းပြန် ဖြစ်ပါတယ်။ Normalization က Redundant Column တွေကို ခွဲထုတ်တယ်။ Denormalization ကတော့ အဲဒီ ခွဲထုတ်ထားတဲ့ Columns တွေကို ပြန်ပေါင်းထည့်တယ်။ ဒါကြောင့် Denormalization ကို Database Optimization Technique တစ်ခုလို့လည်း ခေါ်ကြပါတယ်။
+
+   Normalization လုပ်ထားတာက အချက်အလက် ထပ်မထည့်အောင် ထိန်းထားပေးပြီး အဆင်ပြေပါတယ်၊ ဒါပေမယ့် ရလာတဲ့ပြဿနာက Table အများကြီးကနေ Data တွေကို ပြန်စုစည်းဖို့ Join Query ပြုလုပ်နေရတတ်ပါတယ်။ Denormalization လုပ်တဲ့အခါမှာတော့ Query ပေါင်းစပ်ချက် မဖြစ်စေချင်တဲ့ Data တွေကိုတစ်ခါတည်း Tables တစ်ခုထဲမှာ ထည့်ထားတာကြောင့် ပိုပြီးမြန်ဆန်ပါတယ်။
+
+   ဥပမာကို တစ်ချက်ကြည့်ပါ။
+
    ![Denormalization](images/Denormalization.png)
 
-   Customer Orders တစ်ခုရဖို့ ကျွန်တော်တို့ table 4 ခုလောက် ပတ်ယူနေစရာမလိုတော့ပါဘူး။ ဒါကြောင့် Query Performance ကတော့ Normalization နဲ့ ယှဥ်ရင် မြန်ဆန်နေတာ တွေ့ရမှာပါ။ 
+   Customer Orders ကိုရဖို့ Table 4 ခုလောက် ပတ်ယူနေစရာ မလိုတော့ပါဘူး။ ဒီလိုနဲ့ Query Performance ပိုမြန်လာတာကို တွေ့မြင်ရမှာပါ။
 
-------------------------------------------------------------------------
-2. Conclusion
+---
 
-   Normalization နဲ့ Denormalization တွေက Data Modeling Concepts တွေဖြစ်ကြတာမို့လို့ ကျွန်တော်တို့ သုံးမယ့် Project / Software နဲ့ ဘယ်လို Database သုံးမလဲ အပေါ်မူတည်ပြီး ရွေးချယ်သုံးရမှာပဲ ဖြစ်ပါတယ်။
+### 2. Conclusion
 
-------------------------------------------------------------------------
+   Normalization နဲ့ Denormalization တွေက Data Modeling Concepts ဖြစ်ကြတာမို့ အကြောင်းအရာတစ်ခုတည်းမှာလည်း မူတည်ပါတယ်။ Project သုံးမယ့် အမျိုးအစားနဲ့ Database Architecture အပေါ်မူတည်ပြီး Normalization, Denormalization တို့ကို အသုံးပြုသင့်ပါတယ်။
+
+---
